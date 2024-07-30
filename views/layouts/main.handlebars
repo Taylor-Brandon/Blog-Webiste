@@ -5,18 +5,22 @@
 </head>
 
 <body>
-    <header>
+  <div id="nav-bar">
+  <nav>
+        <a id="home" href="/">Home</a>
+        <a id="dash" href="/dashboard/:id">Dashboard</a>
+        <a id="login" href="/login">Login</a>
+        <a id="logout" href="/logout">Logout</a>
+        <header>
       <h1>
         Star Wars Blog
       </h1>
     </header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/dashboard/:id">Dashboard</a>
-        <a href="/login">Login</a>
-        <a href="/logout">Logout</a>
     </nav>
-      <main class="container container-fluid mt-5">
+  </div>
+    
+    
+      <main id="body" class="container container-fluid mt-5">
         {{{body}}}
       </main>
   </body>
