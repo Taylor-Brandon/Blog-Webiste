@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Star Wars Blog</title>
@@ -8,9 +10,12 @@
   <div id="nav-bar">
   <nav>
         <a id="home" href="/">Home</a>
+        {{#if loggedIn}}
         <a id="dash" href="/dashboard/:id">Dashboard</a>
-        <a id="login" href="/login">Login</a>
         <a id="logout" href="/logout">Logout</a>
+        {{else}}
+         <a id="login" href="/login">Login</a>
+         {{/if}}
         <header>
       <h1>
         Star Wars Blog
@@ -23,5 +28,8 @@
       <main id="body" class="container container-fluid mt-5">
         {{{body}}}
       </main>
+      {{#if loggedIn}}
+  <script src="../../public/js/logout.js"></script>
+  {{/if}}
   </body>
 </html>
