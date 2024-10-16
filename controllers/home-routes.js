@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { reseller } = require('googleapis/build/src/apis/reseller');
 const { User, Post } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -40,7 +39,14 @@ router.get('/signup', (req, res) => {
  
  router.get('/post/:id', async (req, res) => {
     try {
-        const postData = await Post.findByPk(req.params.id);
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                }
+            ]
+        });
 
         if (!postData) {
             res.status(404).json({ message: 'No post found with this ID' });
