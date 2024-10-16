@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
       res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
     });
   } catch (err) {
@@ -36,7 +36,12 @@ router.post('/signup', async (req, res) => {
       email: req.body.email,
       password: req.body.password
     });
-    res.status(200).json(dbUserData);
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(dbUserData);
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -44,7 +49,7 @@ router.post('/signup', async (req, res) => {
 
 
 router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
@@ -52,5 +57,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 
 module.exports = router;
