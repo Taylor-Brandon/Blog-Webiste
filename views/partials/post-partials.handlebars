@@ -1,6 +1,12 @@
 <section class="card">
-  <a href="/comment/{{id}}">
-    <header class="title">{{post.title}}</header>
+  <a href="/comment/{{post.id}}">
+    {{#if logged_in}}
+      <header class="title">{{post.title}}</header>
+    {{/if}}
     <p>{{post.description}}</p>
+    {{#if logged_in}}
+    <p>{{post.createdAt}}</p>
+    {{/if}}
   </a>
 </section>
+
