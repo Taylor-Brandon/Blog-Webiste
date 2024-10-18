@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../models');
+const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -11,9 +11,13 @@ router.get('/', async (req, res) => {
         const posts = dbPostData.map((post) =>
             post.get({ plain: true })
         );
+
+        
+
         res.render('homepage', {
             posts,
             logged_in: req.session.logged_in,
+            user_id: req.session.user_id,
         });
     } catch (err) {
         console.error(err);
@@ -44,6 +48,14 @@ router.get('/signup', (req, res) => {
                 {
                     model: User,
                     attributes: ['username'],
+                },
+                {
+                    model: Comment,
+                    include: {
+                        model: User,
+                        attributes: ['username'],
+                    },
+                    attributes: ['description', 'createdAt'],
                 }
             ]
         });
@@ -57,7 +69,8 @@ router.get('/signup', (req, res) => {
 
         res.render('post', {
             post, 
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id,
         });
     } catch (err) {
         console.error(err);
