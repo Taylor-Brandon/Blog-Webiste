@@ -11,6 +11,7 @@
     <nav>
       <a id="home" href="/">Home</a>
       {{#if logged_in}}
+      <h1 id="userId">{{user_id}}</h1>
       <a id="dash" href="/dashboard">Dashboard</a>
       <a id="logout">Logout</a>
       {{else}}
