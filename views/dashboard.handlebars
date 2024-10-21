@@ -1,0 +1,17 @@
+<h1>Dashboard</h1>
+<h2>User Posts:</h2>
+{{#each user.posts}}
+<div>
+    <p>{{this.user.username}}, {{this.title}}, {{this.description}}, ({{this.createdAt}})</p>
+</div>
+{{else}}
+<p>No Posts Yet</p>
+{{/each}}
+
+<div>
+    <form>
+        <label>Add New Post</label>
+        <input type="text" id="post-description">
+        <button type="submit" id="submit-btn">Submit</button>
+    </form>
+</div>
