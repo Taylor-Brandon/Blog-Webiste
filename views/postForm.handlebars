@@ -1,13 +1,3 @@
-<h1>Dashboard</h1>
-<h2>User Posts:</h2>
-{{#each user.posts}}
-<div>
-    <p>{{this.user.username}}, {{this.title}}, {{this.description}}, ({{this.createdAt}})</p>
-</div>
-{{else}}
-<p>No Posts Yet</p>
-{{/each}}
-
 <h1 id="user-id">{{user_id}}</h1>
 <div class="form">
     <form id="post-form">

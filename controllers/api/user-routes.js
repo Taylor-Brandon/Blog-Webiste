@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Comment } = require('../../models');
+const { User, Comment, Post } = require('../../models');
 
 
 router.post('/login', async (req, res) => {
@@ -77,6 +77,24 @@ router.post('/post/:id', async (req, res) => {
   } catch (err) {
       console.error(err);
       res.status(500).json({ message: 'Failed to add comment.', error: err });
+  }
+});
+
+router.post('/postForm', async (req, res) => {
+  const userId = req.session.user_id;
+  if (!userId) {
+    return res.status(401).json({ message: 'You must be logged in to add a post!'});
+  }
+  try {
+    const dbPostData = await Post.create({
+      title: req.body.title,
+      description: req.body.description,
+      user_id: userId
+    });
+    res.status(200).json(dbPostData);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Failed to add Post!', err });
   }
 });
 
