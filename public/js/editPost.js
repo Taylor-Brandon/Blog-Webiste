@@ -5,23 +5,24 @@ const handleEditPost = async (event) => {
     const description = document.querySelector('#update-description').value.trim();
     const postId = window.location.pathname.split('/').pop();
 
-
-    if (title || description) {
+    if (title && description) {
         try {
-            const response = await fetch('/api/users/editPost/:id', {
+            const response = await fetch(`/api/users/editPost/${postId}`, {
                 method: 'POST',
                 body: JSON.stringify({ title, description }),
                 headers: { 'Content-Type': 'application/json' }
             });
+
             if (response.ok) {
                 alert('Updated Post!');
                 document.location.replace('/dashboard');
             } else {
-                alert('Failed to add post!');
+                const errorMessage = await response.json();
+                alert(`Failed to update post: ${errorMessage.message}`);
             }
         } catch (err) {
             console.error(err);
-            alert('Failed to add post due to network error');
+            alert('Failed to update post due to network error');
         }
     }
 };

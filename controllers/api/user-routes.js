@@ -107,11 +107,9 @@ router.post('/editPost/:id', async (req, res) => {
     postData.title = req.body.title;
     postData.description = req.body.description;
     await postData.save();
-    alert('Post updated successfully!');
-
     res.status(200).json({ message: 'Post updated Successfully!'});
 } catch (err) {
-  res.status(500).json({message: "Error:", err});
+  res.status(500).json({ message: 'Failed to update post', error: err.message });
 }
 });
 
