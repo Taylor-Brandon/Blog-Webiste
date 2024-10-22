@@ -5,10 +5,6 @@ const commentFormHandler = async (event) => {
   const postId = parseInt(window.location.pathname.split('/').pop(), 10); 
   const userId = parseInt(document.querySelector('#userId').textContent, 10); 
 
-  console.log('Comment Description:', description);
-  console.log('Post ID:', postId);
-  console.log('User ID:', userId);
-
   if (description) {
       try {
           const response = await fetch(`/api/users/post/${postId}`, {

@@ -67,15 +67,6 @@ router.get('/signup', (req, res) => {
     }
 });
 
-router.get('/postForm', (req, res) => {
-    if (!req.session.logged_in) {
-        res.redirect('/');
-        return;
-    }
-        res.render('postForm');
-});
-
-
  router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
