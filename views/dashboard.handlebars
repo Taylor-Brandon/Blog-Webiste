@@ -2,7 +2,8 @@
 <h2>User Posts:</h2>
 {{#each user.posts}}
 <div>
-    <p>{{this.user.username}}, {{this.title}}, {{this.description}}, ({{this.createdAt}})</p>
+    <p>{{this.title}}, {{this.description}}, ({{this.createdAt}})</p>
+    <a id="editPost-link" href="/editPost/{{this.id}}">Edit Post</a>
 </div>
 {{else}}
 <p>No Posts Yet</p>

@@ -98,5 +98,20 @@ router.post('/postForm', async (req, res) => {
   }
 });
 
+router.post('/editPost/:id', async (req, res) => {
+  try {
+  const postData = await Post.findByPk(req.params.id);
+  if (!postData) {
+    res.json(404).send('Post not found with this id');
+  } 
+    postData.title = req.body.title;
+    postData.description = req.body.description;
+    await postData.save();
+    res.status(200).json({ message: 'Post updated Successfully!'});
+} catch (err) {
+  res.status(500).json({ message: 'Failed to update post', error: err.message });
+}
+});
+
 
 module.exports = router;
