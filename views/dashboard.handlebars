@@ -4,7 +4,7 @@
 <div>
     <p>{{this.title}}, {{this.description}}, ({{this.createdAt}})</p>
     <a id="editPost-link" href="/editPost/{{this.id}}">Edit Post</a>
-    <button id="delete-btn" data-id="{{this.id}}">Delete</button>
+    <button class="delete-btn" data-id="{{this.id}}">Delete</button>
 </div>
 {{else}}
 <p>No Posts Yet</p>
@@ -26,3 +26,4 @@
 </div>
 
 <script src="/js/postForm.js"></script>
+<script src="/js/delete.js"></script>
