@@ -113,7 +113,7 @@ router.post('/editPost/:id', async (req, res) => {
 }
 });
 
-router.delete('/dashboard', async (req, res) => {
+router.delete('/deletePost/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
 
