@@ -1,12 +1,16 @@
+<div class="cards">
 <section class="card">
-  <a href="/post/{{post.id}}">
+  <a id="posts" href="/post/{{post.id}}">
     {{#if logged_in}}
-      <header class="title">{{post.title}}</header>
+      <header id="posts-title" class="title">{{post.title}}</header>
     {{/if}}
     <p>{{post.description}}</p>
     {{#if logged_in}}
+    <div class="card-footer">
     <p>{{post.createdAt}}</p>
+    </div>
     {{/if}}
   </a>
 </section>
+</div>
 

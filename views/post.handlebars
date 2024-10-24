@@ -1,25 +1,39 @@
+<div class="post-card">
 <h1 id="userId">{{user_id}}</h1>
 <section class="card">
       <header class="title">{{post.title}}</header>
+      <div class="info">
     <p>{{post.description}}</p>
-    <p>{{post.user.email}}</p>
+    <div class="card-footer">
+    <div class="info-footer">
     <p>{{post.createdAt}}</p>
     <p>Author: {{post.user.username}}</p>
+    </div>
+    </div>
+    </div>
 </section>
+</div>
 
-<form id="comment-form">
-    <label>Comment</label>
-    <input type="text" id="comment-description">
-    <button type='submit' id="submit-comment">Submit</button>
-</form>
-
-<h2>Comments:</h2>
+<div class="comment-area">
+<div id="comment-card">
+    <div class="card-content">
+<h2 id="comment-header">Comments:</h2>
 {{#each post.comments}}
     <div>
-        <p><strong>{{this.user.username}}:</strong> {{this.description}} <em>({{this.createdAt}})</em></p>
+        <p id="comment-content"><strong>{{this.user.username}}:</strong> {{this.description}} <em>({{this.createdAt}})</em></p>
     </div>
 {{else}}
     <p>No comments yet.</p>
 {{/each}}
+
+<form id="comment-form">
+    <div class="field">
+    <input class="input" type="text" id="comment-description" placeholder="Add Comment">
+    </div>
+    <button id="comment-submit" class="button" type='submit' id="submit-comment">+</button>
+</form>
+</div>
+</div>
+</div>
 
 <script src="/js/commentForm.js"></script>

@@ -1,29 +1,50 @@
-<h1>Dashboard</h1>
-<h2>User Posts:</h2>
+<div class="dashboard-area">
+<div class="dashboard">
+    <div class="card-area">
 {{#each user.posts}}
-<div>
-    <p>{{this.title}}, {{this.description}}, ({{this.createdAt}})</p>
-    <a id="editPost-link" href="/editPost/{{this.id}}">Edit Post</a>
-    <button class="delete-btn" data-id="{{this.id}}">Delete</button>
+<div class="dash-card">
+
+    <p id="dash-title">{{this.title}}</p>
+    <p>{{this.description}}</p>
+    <div class="card-footer">
+    <p>({{this.createdAt}})</p>
+    <a id="editPost-link" href="/editPost/{{this.id}}"><i class="bi bi-pencil-square"></i></a>
+    <button id="del-btn" class="delete-btn" data-id="{{this.id}}"><i class="bi bi-trash"></i></button>
+    </div>
 </div>
 {{else}}
 <p>No Posts Yet</p>
 {{/each}}
+</div>
 
+<div class="add-area">
+<button class="button" id="add-post">Add Post</button>
+</div>
+<div class="form-area">
+<div id="dash-form" class="card">
 <h1 id="user-id">{{user_id}}</h1>
 <div class="form">
     <form id="post-form">
-        <div>
-        <label>Title</label>
-        <input id="title-input" type="text">
+        <div class="filed">
+        <label class="label">Title</label>
+        <div class="control">
+        <input class="input" id="title-input" type="text" placeholder="Title">
         </div>
-        <div>
-            <label>Description</label>
-            <input id="description-input" type="text">
         </div>
-        <button id="postForm-btn" type="submit">Submit</button>
+        <div class="filed">
+            <label class="label">Description</label>
+            <div class="control">
+            <input class="input" id="description-input" type="text" placeholder="Description">
+            </div>
+        </div>
+        <button class="button" id="postForm-btn" type="submit">Submit</button>
     </form>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 <script src="/js/postForm.js"></script>
 <script src="/js/delete.js"></script>
+<script src="/js/button.js"></script>
