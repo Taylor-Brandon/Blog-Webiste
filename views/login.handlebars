@@ -1,16 +1,26 @@
-<h2>Login</h2>
-
+<div id="log">
+<card class="login-card">
+  <div class="card-content">
+<h2 id="login-header">Login</h2>
 <form class="login-form">
   <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-login" />
+    <div class="field">
+    <label class="label" for="email-login">email:</label>
+    <div class="control">
+    <input class="input" type="text" id="email-login" placeholder="email" />
+    </div>
+  </div>
   </div>
   <div class=" form form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
+    <div class="field">
+    <label class="label" for="password-login">password:</label>
+    <div class="control">
+    <input class="input" type="password" id="password-login" placeholder="password" />
+    </div>
   </div>
   <div class="form-group">
-    <button class="btn btn-primary" type="submit">login</button>
+    <button class="button" type="submit">login</button>
+  </div>
   </div>
 </form>
 
@@ -19,6 +29,9 @@
   Don't have an account, sign up!
 </h2>
 <a href="/signup">SignUp</a>
+</div>
+</div>
+</card>
 </div>
 
 <script src="/js/login.js"></script>

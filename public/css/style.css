@@ -1,0 +1,258 @@
+#userId{
+    display: none;
+}
+#nav-bar{
+    height: 100px;
+    border: 1px solid black;
+}
+.nav-items{
+    margin-left: 20px;
+    padding: 10px;
+}
+#home{
+    margin-right: 20px;
+    font-family: "Playfair Display", serif;
+    color: black;
+    font-weight: bold;
+}
+#dash{
+    margin-right: 20px;
+    font-family: "Playfair Display", serif;
+    color: black;
+    font-weight: bold;
+}
+#logout{
+    margin-right: 20px;
+    font-family: "Playfair Display", serif;
+    color: black;
+    font-weight: bold;
+}
+#login{
+    margin-right: 20px;
+    font-family: "Playfair Display", serif;
+    color: black;
+    font-weight: bold;
+}
+#signup{
+    margin-right: 20px;
+    font-family: "Playfair Display", serif;
+    color: black;
+    font-weight: bold;
+}
+#header{
+    font-family: "Playfair Display", serif;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+#body{
+    height: 100vh;
+    background-color: rgb(171, 201, 211);
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 50%;
+    padding: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 0px solid black;
+    border-radius: 20px;
+}
+#posts{
+    font-family: "Playfair Display", serif;
+    color: black;
+}
+#posts-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+#log{
+    display: flex;
+    justify-content: center;
+}
+.login-card{
+    width: 25%;
+    margin-top: 20px;
+    font-size: 15px;
+    color: black;
+    font-family: "Playfair Display", serif;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+#login-header{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+.sign-btn{
+    margin-top: 5px;
+    text-align: center;
+}
+#sign{
+    display: flex;
+    justify-content: center;
+}
+.signup-card{
+    width: 25%;
+    margin-top: 20px;
+    font-size: 15px;
+    color: black;
+    font-family: "Playfair Display", serif;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+}
+#sign-header{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+#sign-btn{
+    margin-top: 10px;
+}
+.post-card{
+    display: flex;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+}
+.info{
+    color: black;
+    margin-top: -10px;
+}
+.info-footer{
+    margin-top: 10px;
+}
+.comment-area{
+    display: flex;
+    justify-content: center;
+}
+#comment-card{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    font-family: "Playfair Display", serif;
+    margin-top: 30px;
+}
+#comment-header{
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#comment-content{
+    margin-bottom: 20px;
+}
+#comment-form{
+    width: 50%;
+}
+.dashboard-area{
+    display: flex;
+    justify-content: center;
+}
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: "Playfair Display", serif;
+}
+.dash-card{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+}
+#dash-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-footer{
+    margin-top: 20px;
+}
+#editPost-link{
+    color: black;
+    font-size: 20px;
+    margin-left: 10px;
+}
+#del-btn{
+    border: 0px solid white;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.add-area{
+    display: flex;
+    justify-content: center;
+}
+#add-post{
+    width: 25%;
+    margin-top: 20px;
+}
+.form-area{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+#dash-form{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+#user-id{
+    display: none;
+}
+#postForm-btn{
+    margin-top: 10px;
+}
+.edit-area{
+    display: flex;
+    justify-content: center;
+}
+.edit-card{
+    margin-top: 20px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-family: "Playfair Display", serif;
+}
+#editPost-btn{
+    margin-top: 10px;
+}
+#home:hover{
+    text-decoration: underline;
+}
+#login:hover{
+    text-decoration: underline;
+}
+#signup:hover{
+    text-decoration: underline;
+}
+#posts:hover{
+    text-decoration: underline;
+}
+#dash:hover{
+    text-decoration: underline;
+}
+
+#logout:hover{
+    text-decoration: underline;
+}
+
+
+
+

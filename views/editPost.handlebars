@@ -1,15 +1,25 @@
-<div>
+<div class="edit-area">
+    <div class="edit-card">
     <form id="editPost-form">
+        <div class="field">
         <div class="title-section">
-        <label>Update Title</label>
-        <input type="text" id="title-update">
+        <label class="label">Update Title</label>
+        <div class="control">
+        <input class="input" type="text" id="title-update" placeholder="Title">
+        </div>
+        </div>
         </div>
         <div class="description-section">
-            <label>Update Description</label>
-            <input type="text" id="update-description">
+            <div class="field">
+            <label class="label">Update Description</label>
+            <div class="control">
+            <input class="input" type="text" id="update-description" placeholder="Description">
+            </div>
         </div>
-        <button type="submit" id="editPost-btn">Update</button>
+        </div>
+        <button class="button" type="submit" id="editPost-btn">Update</button>
     </form>
+    </div>
 </div>
 
 <script src="/js/editPost.js"></script>

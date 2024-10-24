@@ -1,21 +1,38 @@
-<h2>Sign Up</h2>
-
+<div id="sign">
+  <card class="signup-card">
+    <div class="card-content">
+<h2 id="sign-header">Sign Up</h2>
 <form class="form signup-form">
   <div class="form-group">
-    <label for="username-signup">email:</label>
-    <input class="form-input" type="text" id="username-signup" />
+    <div class="field">
+    <label class="label" for="username-signup">Username:</label>
+    <div class="control">
+    <input class="input" type="text" id="username-signup" placeholder="Username" />
+    </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+    <label class="label" for="email-login">Email:</label>
+    <div class="control">
+    <input class="input" type="text" id="email-signup" placeholder="Email" />
+  </div>
+  </div>
+  </div>
   </div>
   <div class="form-group">
-    <label for="email-login">email:</label>
-    <input class="form-input" type="text" id="email-signup" />
+    <div class="field">
+    <label class="label" for="password-login">password:</label>
+    <div class="control">
+    <input class="input" type="password" id="password-signup" placeholder="Password" />
+  </div>
+  </div>
   </div>
   <div class="form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-signup" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">Signup</button>
+    <button id="sign-btn" class="button" type="submit">Signup</button>
   </div>
 </form>
+</div>
+</card>
+</div>
 
 <script src="/js/signup.js"></script>
