@@ -18,14 +18,14 @@
 
 ## Introduction
 
-This is a Blog Website using Model, View, Controller organization in order to allow users to public programming blog posts including thoughts, opinions, and articles.
+This is a Blog Website using Model, View, Controller organization in order to allow users to publish programming blog posts including thoughts, opinions, and articles.
 
 ## Features
 
 * Includes a homepage with the option to sign up or login as well as published blog posts.
-* Includes a homepage when the user logs in with published blog posts with user information as well a navigation with links to a dashboard, logout, and home.
-* Includes authorization to check if a user has loggged in or signed up before allowing blog posts to be published.
-* Saves user credentials when signed in to later allow for users to login.
+* Includes a homepage when the user is authenticated with published blog posts as well a navigation with links to their dashboard, logout, and homepage.
+* Includes authorization to check if a user has logged in or signed up before allowing blog posts to be published.
+* Saves user credentials when signed up to enable login.
 * Allows for users to add comments to blog posts if they are logged in.
 * Ensures homepage and dashboard are updated to present the latest blog posts.
 * Includes the ability to update or delete blog posts.
@@ -56,7 +56,7 @@ This project can be accessed via the live demo link or locally by following thes
 Navigate to the homepage -
 
 * Indentify the navigation bar with links to the homepage, login form, and the sign up form.
-* When navigating the login or sign up form, users are able to enter credentials to be redirected to the hompeage again with greater functionality.
+* When navigating the login or sign up form, users are able to enter credentials to be redirected to the homepage again with greater functionality.
 * After the user has logged in or signed up, users should identify the new navigation links to the homepage, logout link, and the dashboard page.
 * After the user has been authenticated, they are able to view blog posts with its title and publish date rather than merely the blog post.
 * When a post has been clicked on, users are able to add identify the author of that blog post as well as the ability to add a comment to this post.
@@ -68,25 +68,26 @@ Navigate to the homepage -
 
 ### Pre-Authenticated Homepage
 
-[Screenshot 1](./public/images/blog1.png)
+![Screenshot 1](./public/images/blog1.png)
 
 ### Sign Up Form
 
-[Screenshot](./public/images/blog2.png)
+![Screenshot](./public/images/blog2.png)
 
 ### Authenticated Homepage
 
-[Screenshot 3](./public/images/blog3.png)
+![Screenshot 3](./public/images/blog3.png)
 
 ### Dashboard
 
-[Screenshot](./public/images/blog4.png)
+![Screenshot](./public/images/blog4.png)
 
 ### Individual Blog Post and Comments
 
-[Screenshot](./public/images/blog5.png)
+![Screenshot](./public/images/blog5.png)
 
 ## Future Developments
+
 * Add the ability to update or delete users own comments.
 * Add the ability to save posts to draft for further updates before publishing.
 * Add further CSS styling to ensure accessibility and enhanced user experience.
@@ -105,3 +106,7 @@ Special thanks to Columbia Bootcamps for providing the educational resources nec
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Demo
+
+Acess Live Website Here: [Demo](https://mysterious-woodland-92307-fc6df31f4737.herokuapp.com/)
